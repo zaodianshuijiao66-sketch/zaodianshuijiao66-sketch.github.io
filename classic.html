@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-SfBQ9nSx6hlum1UwbLVyf0UzC3KtOFZLVArWwow8sW4='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob: https://sakura-camp-connect-test.netlify.app; font-src 'self' data:; connect-src 'self'; frame-src https://sakura-camp-connect-test.netlify.app; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>刘豪芳｜个人主页</title>
+<meta name="description" content="会日语的 AI 创作者。用 AI 写代码做出学习 App「ING」，用代码渲染动画运营抖音与日语教学账号。日语 N1，大连外国语大学硕士在读。">
+<meta name="theme-color" content="#08090a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2308090a'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='%23f7f8f8' font-family='sans-serif'%3E刘%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#08090a; --bg-2:#0f1011; --card:#121314; --card-2:#17181a;
+  --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.14);
+  --text:#f7f8f8; --text-2:#b4bcd0; --muted:#8a8f98; --faint:#62666d;
+  --accent:#7c84f2; --accent-2:#5e6ad2; --pink:#f2a7b8; --green:#68cc9a;
+  --radius:14px; --max:1080px;
+  --font:"Inter","SF Pro Display",-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);background:rgba(8,9,10,.72);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;letter-spacing:.02em}
+.brand img{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1px solid var(--line-2)}
+.nav-links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+.nav-links a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:10px;font-size:14px;font-weight:500;border:1px solid var(--line-2);background:rgba(255,255,255,.04);color:var(--text);transition:background .2s,border-color .2s,transform .2s;cursor:pointer;font-family:inherit;white-space:nowrap}
+.btn:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22)}
+.btn.primary{background:var(--text);color:#08090a;border-color:var(--text)}
+.btn.primary:hover{background:#fff;transform:translateY(-1px)}
+.btn.sm{height:34px;padding:0 12px;font-size:13px}
+.arrow{font-size:.95em;opacity:.7}
+
+/* hero */
+.hero{position:relative;padding:96px 0 72px;text-align:center;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:-120px 0 auto;height:620px;z-index:-1;
+  background:radial-gradient(48% 60% at 50% 0%,rgba(124,132,242,.28),transparent 70%),radial-gradient(30% 40% at 72% 20%,rgba(242,167,184,.12),transparent 70%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;
+  mask-image:radial-gradient(60% 55% at 50% 30%,#000,transparent);-webkit-mask-image:radial-gradient(60% 55% at 50% 30%,#000,transparent)}
+.avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;margin:0 auto 24px;border:1px solid var(--line-2);box-shadow:0 0 0 6px rgba(255,255,255,.03),0 20px 60px rgba(124,132,242,.25)}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:5px 12px 5px 8px;border:1px solid var(--line-2);border-radius:999px;font-size:13px;color:var(--text-2);background:rgba(255,255,255,.03);margin-bottom:28px}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+h1{font-size:clamp(40px,7vw,72px);line-height:1.08;letter-spacing:-.02em;font-weight:650;
+  background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,.62));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{max-width:620px;margin:22px auto 0;font-size:clamp(16px,2.2vw,18px);color:var(--muted)}
+.hero p.lead b{color:var(--text-2);font-weight:500}
+.cta{display:flex;gap:12px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));overflow:hidden}
+.stat{padding:22px 20px;text-align:left;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat .num{font-size:28px;font-weight:600;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.stat .lab{font-size:13px;color:var(--muted);margin-top:2px}
+
+/* sections */
+section{padding:96px 0;border-top:1px solid var(--line)}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--accent);font-weight:500;letter-spacing:.04em;margin-bottom:16px}
+.eyebrow .no{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--faint)}
+h2{font-size:clamp(28px,4.4vw,44px);line-height:1.15;letter-spacing:-.015em;font-weight:620;max-width:760px}
+.sec-lead{margin-top:16px;max-width:680px;color:var(--muted);font-size:17px}
+.sec-lead b{color:var(--text-2);font-weight:500}
+
+/* app */
+.frame{margin-top:48px;border:1px solid var(--line-2);border-radius:16px;background:var(--bg-2);overflow:hidden;box-shadow:0 40px 120px -20px rgba(124,132,242,.25),0 0 0 1px rgba(255,255,255,.02)}
+.frame-bar{display:flex;align-items:center;gap:8px;height:40px;padding:0 14px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+.frame-bar i{width:10px;height:10px;border-radius:50%;background:#2a2b2e}
+.frame-bar .url{margin:0 auto;font-size:12px;color:var(--faint);font-family:ui-monospace,Menlo,Consolas,monospace;padding:3px 12px;border:1px solid var(--line);border-radius:6px;max-width:70%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.frame img{width:100%;height:auto}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.feat{background:var(--bg);padding:24px 22px}
+.feat .ic{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-size:15px;background:rgba(124,132,242,.12);color:var(--accent);border:1px solid rgba(124,132,242,.25);margin-bottom:14px}
+.feat h3{font-size:15px;font-weight:600}
+.feat p{font-size:14px;color:var(--muted);margin-top:6px;line-height:1.6}
+.meta-row{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;margin-top:28px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px;color:var(--muted)}
+.meta b{color:var(--text-2);font-weight:500;margin-right:6px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+
+/* content */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:44px;counter-reset:s;list-style:none}
+.steps li{position:relative;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--card);counter-increment:s}
+.steps li::before{content:"0" counter(s);display:block;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--accent);margin-bottom:10px}
+.steps li:not(:last-child)::after{content:"→";position:absolute;right:-11px;top:50%;transform:translateY(-50%);color:var(--faint);font-size:14px;z-index:1;background:var(--bg);line-height:1}
+.steps h3{font-size:15px;font-weight:600}
+.steps p{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.6}
+.covers{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:40px}
+.cover{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--card);aspect-ratio:3/4}
+.cover img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.cover:hover img{transform:scale(1.04)}
+.cover .play{position:absolute;left:10px;bottom:10px;display:flex;align-items:center;gap:6px;padding:3px 9px;border-radius:999px;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.cover .play svg{width:10px;height:10px}
+.callout{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;margin-top:20px;padding:22px 26px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(90deg,rgba(124,132,242,.08),rgba(255,255,255,.01) 60%)}
+.compare{display:flex;align-items:baseline;gap:14px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.compare .from{font-size:20px;color:var(--faint);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.2)}
+.compare .to{font-size:30px;font-weight:650;color:var(--text)}
+.compare .sep{color:var(--accent)}
+.callout p{font-size:14px;color:var(--muted)}
+
+/* japanese */
+.jp{display:grid;gap:12px;margin-top:44px}
+.jp-covers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.jp-covers .cover{aspect-ratio:3/4}
+.platforms{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.platforms .note{grid-column:1/-1}
+.platform{padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+.platform .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.platform .name{display:flex;align-items:center;gap:10px;font-weight:600}
+.badge{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;font-size:12px;font-weight:700}
+.badge.xhs{background:#ff2442;color:#fff}
+.badge.bili{background:#00a1d6;color:#fff}
+.badge.dy{background:#111;color:#fff;border:1px solid var(--line-2)}
+.platform .handle{font-size:13px;color:var(--muted);font-weight:400}
+.nums{display:flex;gap:28px;margin-top:18px;font-variant-numeric:tabular-nums}
+.nums div{font-size:22px;font-weight:600}
+.nums span{display:block;font-size:12.5px;color:var(--muted);font-weight:400}
+.note{font-size:14px;color:var(--muted);padding:18px 22px;border:1px dashed var(--line-2);border-radius:var(--radius)}
+.note b{color:var(--text-2);font-weight:500}
+
+/* resume */
+.cv{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:44px}
+.cv-col{border:1px solid var(--line);border-radius:var(--radius);background:var(--card);padding:8px 22px}
+.cv-col h3{font-size:12px;color:var(--faint);font-weight:500;letter-spacing:.08em;padding:14px 0 6px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.row:first-of-type{border-top:0}
+.row b{display:block;font-weight:600;font-size:15px}
+.row span{font-size:13.5px;color:var(--muted)}
+.row time{font-size:13px;color:var(--faint);font-family:ui-monospace,Menlo,Consolas,monospace;white-space:nowrap;padding-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{font-size:13px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--text-2);background:rgba(255,255,255,.02)}
+
+/* footer */
+.contact{text-align:center;padding:110px 0 90px;border-top:1px solid var(--line);position:relative;isolation:isolate}
+.contact::before{content:"";position:absolute;inset:auto 0 0;height:420px;z-index:-1;background:radial-gradient(45% 70% at 50% 100%,rgba(124,132,242,.2),transparent 70%)}
+.contact h2{margin:0 auto}
+.contact p{color:var(--muted);margin-top:14px}
+.mail{display:inline-flex;align-items:center;gap:12px;margin-top:32px;padding:8px 8px 8px 20px;border:1px solid var(--line-2);border-radius:12px;background:rgba(255,255,255,.03);font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:22px 0 34px;font-size:13px;color:var(--faint);border-top:1px solid var(--line)}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;padding:10px 16px;border-radius:10px;background:var(--text);color:#08090a;font-size:14px;font-weight:500;transition:.25s;pointer-events:none;z-index:50}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:900px){
+  .covers{grid-template-columns:repeat(3,1fr)}
+  .covers .cover:nth-child(n+4){display:none}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .steps li:nth-child(2)::after{display:none}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .nav-links{display:none}
+  .hero{padding:64px 0 48px}
+  .stats{grid-template-columns:repeat(2,1fr);margin-top:48px}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+  .stat .num{font-size:24px}
+  section{padding:72px 0}
+  .covers{grid-template-columns:repeat(2,1fr)}
+  .covers .cover:nth-child(n+4){display:block}
+  .covers .cover:nth-child(5){display:none}
+  .steps{grid-template-columns:1fr}
+  .steps li::after{display:none!important}
+  .feat{padding:18px 16px}
+  .feat p{font-size:13px}
+  .jp-covers{grid-template-columns:repeat(2,1fr)}
+  .platforms{grid-template-columns:1fr}
+  .callout{grid-template-columns:1fr;gap:12px}
+  .cv{grid-template-columns:1fr}
+  .meta-row{flex-direction:column;align-items:flex-start}
+  .mail{font-size:13px;padding-left:14px}
+  .frame-bar .url{max-width:60%}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">刘豪芳</a>
+    <div class="nav-links">
+      <a href="#app">Vibe Coding</a>
+      <a href="#douyin">抖音</a>
+      <a href="#japanese">日语教学</a>
+      <a href="#cv">履历</a>
+    </div>
+    <a class="btn sm" href="#contact">联系我</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="pill"><span class="dot"></span>正在寻找实习 · 杭州</div>
+    <h1>会日语的 AI 创作者</h1>
+    <p class="lead">我用 AI 写代码，做出了一款<b>正在使用的学习 App</b>，也用代码渲染动画，运营<b>抖音心理账号和日语教学账号</b>。日语 N1，大连外国语大学日语语言文学硕士在读。</p>
+    <div class="cta">
+      <a class="btn primary" href="https://sakura-camp-connect-test.netlify.app/" target="_blank" rel="noopener">打开我做的 App <span class="arrow">↗</span></a>
+      <a class="btn" href="#douyin">看看我的内容</a>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><div class="num">3 端</div><div class="lab">App 支持安卓 · iPhone · 网页</div></div>
+      <div class="stat"><div class="num">7.4 万</div><div class="lab">抖音 12 条视频总播放</div></div>
+      <div class="stat"><div class="num">1.1 万</div><div class="lab">抖音单条最高播放</div></div>
+      <div class="stat"><div class="num">360+</div><div class="lab">小红书 + B 站粉丝</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="app">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="no">01</span>Vibe Coding</div>
+    <h2 class="reveal">ING：把计划、番茄钟、好友自习和宠物养成放在一起</h2>
+    <p class="sec-lead reveal">一款学习陪伴 App，从需求、界面到功能都由我<b>用 Codex 独立完成</b>，已经上线，我和朋友每天在用。</p>
+
+    <div class="frame reveal">
+      <div class="frame-bar"><i></i><i></i><i></i><span class="url">sakura-camp-connect-test.netlify.app/about</span></div>
+      <a href="https://sakura-camp-connect-test.netlify.app/about" target="_blank" rel="noopener"><img src="assets/ing-about.jpg" alt="ING介绍页截图" loading="lazy" width="1600" height="1000"></a>
+    </div>
+
+    <div class="grid-4 reveal" style="margin-top:12px">
+      <div class="feat"><div class="ic">◷</div><h3>时间计划</h3><p>批量安排整月任务，常用模板一键套用，长期目标拆成每日小事。</p></div>
+      <div class="feat"><div class="ic">▶</div><h3>番茄钟</h3><p>倒计时跟着计划走，支持白噪音、长短休，用热力图记录专注。</p></div>
+      <div class="feat"><div class="ic">◎</div><h3>好友自习室</h3><p>分享邀请码进同一个房间，看彼此进度，点赞和留言互相鼓励。</p></div>
+      <div class="feat"><div class="ic">✿</div><h3>宠物养成</h3><p>20 种小伙伴随专注时长长大，可换装、布置小院、招待朋友。</p></div>
+    </div>
+
+    <div class="meta-row reveal">
+      <div class="meta">
+        <span><b>角色</b>产品设计 + 开发</span>
+        <span><b>工具</b>Codex</span>
+        <span><b>平台</b>安卓安装包 / iPhone 桌面版 / 网页</span>
+      </div>
+      <div class="btns">
+        <a class="btn sm" href="https://sakura-camp-connect-test.netlify.app/" target="_blank" rel="noopener">打开番茄钟 <span class="arrow">↗</span></a>
+        <a class="btn sm" href="https://sakura-camp-connect-test.netlify.app/about" target="_blank" rel="noopener">查看介绍页 <span class="arrow">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="douyin">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="no">02</span>抖音 · vibe知识大赏</div>
+    <h2 class="reveal">用动画讲依恋心理，每一帧都是代码画出来的</h2>
+    <p class="sec-lead reveal">一个讲焦虑型、回避型、恐惧型、安全型依恋的账号。动画不用剪辑软件，而是<b>我和 AI 一起写 Python 代码渲染</b>，从选题、脚本到成片都自己完成。</p>
+
+    <ol class="steps reveal">
+      <li><h3>拆解爆款</h3><p>抓取约 60 条同类视频，总结标题、时长和转发理由的规律。</p></li>
+      <li><h3>写脚本</h3><p>每条 15–30 秒，按秒设计画面、字幕和反转。</p></li>
+      <li><h3>代码渲染</h3><p>用 AI 编写 Python 代码生成动画、合成音效，输出成片和封面。</p></li>
+      <li><h3>数据复盘</h3><p>记录完播率、2 秒跳出率、点赞率，决定下一条怎么改。</p></li>
+    </ol>
+
+    <div class="covers reveal">
+      <figure class="cover"><img src="assets/cover-talk.jpg" alt="我们聊聊" loading="lazy"><figcaption class="play"><svg viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>1.1 万</figcaption></figure>
+      <figure class="cover"><img src="assets/cover-dinner.jpg" alt="对象和异性朋友去吃饭了" loading="lazy"><figcaption class="play"><svg viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>9,965</figcaption></figure>
+      <figure class="cover"><img src="assets/cover-four.jpg" alt="4 种依恋类型" loading="lazy"><figcaption class="play"><svg viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>9,585</figcaption></figure>
+      <figure class="cover"><img src="assets/cover-fight.jpg" alt="吵完架的第一晚" loading="lazy"><figcaption class="play"><svg viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>9,321</figcaption></figure>
+      <figure class="cover"><img src="assets/cover-3h.jpg" alt="3 小时没回消息" loading="lazy"><figcaption class="play"><svg viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>9,314</figcaption></figure>
+    </div>
+
+    <div class="callout reveal">
+      <div class="compare"><span class="from">800–2,600</span><span class="sep">→</span><span class="to">9,000+</span></div>
+      <p>根据数据调整选题和封面后，单条播放从早期的 800–2,600 提升到稳定 9,000 以上，有 6 条达到这个水平。</p>
+      <a class="btn sm" href="https://v.douyin.com/nfyEC4VY0ug/" target="_blank" rel="noopener">抖音主页 <span class="arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="japanese">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="no">03</span>小红书 · B 站</div>
+    <h2 class="reveal">把 JLPT 语法讲成 4 分钟的对比视频</h2>
+    <p class="sec-lead reveal">把容易混淆的语法放进一张四宫格，一次讲清区别。画面、字幕同样<b>用代码制作</b>，同步发布到小红书和 B 站。</p>
+
+    <div class="jp">
+      <div class="jp-covers reveal">
+        <figure class="cover"><img src="assets/jp-joken.jpg" alt="四个条件形：と、ば、たら、なら" loading="lazy"></figure>
+        <figure class="cover"><img src="assets/jp-keigo.jpg" alt="敬语四兄弟" loading="lazy"></figure>
+        <figure class="cover"><img src="assets/jp-kasetsu.jpg" alt="假设与让步" loading="lazy"></figure>
+        <figure class="cover"><img src="assets/jp-dokoro.jpg" alt="递进四兄弟" loading="lazy"></figure>
+      </div>
+      <div class="platforms reveal">
+        <div class="platform">
+          <div class="top">
+            <div class="name"><span class="badge xhs">书</span>小红书 <span class="handle">Koi</span></div>
+            <a class="btn sm" href="https://xhslink.cn/o/6EE0qWDGGaV" target="_blank" rel="noopener">主页 <span class="arrow">↗</span></a>
+          </div>
+          <div class="nums">
+            <div>261<span>粉丝</span></div>
+            <div>1,386<span>获赞与收藏</span></div>
+            <div>43<span>篇笔记</span></div>
+          </div>
+        </div>
+        <div class="platform">
+          <div class="top">
+            <div class="name"><span class="badge bili">B</span>B 站 <span class="handle">小锦鲤こい</span></div>
+            <a class="btn sm" href="https://b23.tv/woEqcdF" target="_blank" rel="noopener">主页 <span class="arrow">↗</span></a>
+          </div>
+          <div class="nums">
+            <div>103<span>粉丝</span></div>
+            <div>22<span>个视频</span></div>
+            <div>292<span>获赞</span></div>
+          </div>
+        </div>
+        <p class="note">覆盖 <b>N3 到 N1</b> 的高频语法：条件形、敬语、假设与让步、递进等，每期附真题和判断流程。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cv">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="no">04</span>履历</div>
+    <h2 class="reveal">教育与经历</h2>
+    <div class="cv reveal">
+      <div class="cv-col">
+        <h3>教育</h3>
+        <div class="row"><div><b>大连外国语大学</b><span>日语语言文学 硕士</span></div><time>2025.09 – 2028.06</time></div>
+        <div class="row"><div><b>南昌大学科学技术学院</b><span>英语 本科</span></div><time>2020.09 – 2024.06</time></div>
+      </div>
+      <div class="cv-col">
+        <h3>经历</h3>
+        <div class="row"><div><b>新东方</b><span>日语老师（兼职）· 零基础至 N3、高考日语</span></div><time>2025.09 – 2026.08</time></div>
+        <div class="row"><div><b>家乡首届漫展</b><span>发起人、总策划 · 实现盈利</span></div><time>2018</time></div>
+      </div>
+    </div>
+    <div class="chips reveal">
+      <span class="chip">日语 N1</span><span class="chip">英语 CET-6</span><span class="chip">Claude Code</span><span class="chip">Codex</span><span class="chip">ChatGPT</span><span class="chip">Python</span><span class="chip">提示词编写</span><span class="chip">内容策划</span><span class="chip">数据复盘</span><span class="chip">Excel</span><span class="chip">剪映</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="reveal">一起聊聊？</h2>
+      <p class="reveal">实习、合作或者只是想问问 App，都欢迎发邮件给我。</p>
+      <div class="mail reveal"><span>3122931627@qq.com</span><button class="btn sm" id="copy" type="button">复制</button></div>
+      <p class="reveal" style="margin-top:14px">电话：132 8423 7970</p>
+    </div>
+  </div>
+  <div class="wrap foot"><span>© 2026 刘豪芳</span><span>这个页面也是和 AI 一起写的</span></div>
+</footer>
+
+<div class="toast" id="toast">邮箱已复制</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+document.getElementById('copy').addEventListener('click',function(){
+  var mail='3122931627@qq.com', t=document.getElementById('toast');
+  function done(ok){t.textContent=ok?'邮箱已复制':'复制失败，请手动复制';t.classList.add('show');setTimeout(function(){t.classList.remove('show')},1800);}
+  if(navigator.clipboard){navigator.clipboard.writeText(mail).then(function(){done(true)},function(){done(false)});}
+  else{var i=document.createElement('input');i.value=mail;document.body.appendChild(i);i.select();try{done(document.execCommand('copy'))}catch(e){done(false)}i.remove();}
+});
+</script>
+</body>
+</html>
